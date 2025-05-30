@@ -1,3 +1,9 @@
+### This file is for getting familiar with 
+### R as it is useful in data science and will give me 
+### another skill to use when needed.
+
+lib <- modules::use("mods") # Import mods and all functions.
+
 # Comments Here
 cat("Hello World\n")
 
@@ -24,22 +30,13 @@ cat("\n")
 hello <- 'Hello World #2' # This is the string, can be "" or ''
 hello
 
-add_nums <- function(a, b) {
-    return (a + b)
-}
+result <- lib$equations$add_nums(x, z) # This might take some getting use to.
 
-add_nums(x, z)
+result
 
-factorial <- function(num) {
-    if (num == 0) {
-        return (1)
-    }
-    num = factorial(num - 1) * num
-    return (num)
-}
 
-num = 9 
-fact = factorial(num)
+num <- 9 
+# Use the factorial function that was imported from the mods folder.
+fact <- lib$equations$factorial(num)
 
 sprintf("%s! = %s", num, fact)
-
